@@ -4,15 +4,11 @@
 => ???
 2.0.0-p247 :002 >
 
+-----
 Hello world
  => nil
+----
 
-
-19. Salga de la sesi ́on interactiva. Para ello escriba el car
-acter de final del fichero del sistema opera-
-tivo. (
-Ctrl + D
-)
 20. Escriba el c ́odigo fuente
 Ruby
 que hace que se muestre por la consola la frase
@@ -23,9 +19,17 @@ helloworld.rb
 y ejec ́utelo con el int ́erprete interactivo. (
 irb helloworld.rb
 )
+----------------
+irb helloworld.rb
+2.0.0p247 :001 > #!/usr/bin/ruby
+2.0.0p247 :002 >   puts "Hello world"
+Hello world
+ => nil 
+----------------
+
+
 21. ¿Cu ́ales son las diferencias entre la ejecuci ́on del pro
-grama
-"Hola Mundo"
+grama"Hola Mundo"
 con el int ́erprete
 de
 Ruby
@@ -34,41 +38,19 @@ ruby helloWorld.rb
 ) y el int ́erprete interactivo del ejercicio anterior? Escr
 iba la
 respuesta en fichero creado en el ejercicio 9.
-22. A ̃nada todo el contenido del directorio
-prct03
-al
-́ındice del repositorio git
-. (
-git add .
-)
-23. Confirme los cambios del ́ındice en el repositorio
-git
-local.
-(
-git commit -m "Creado el programa Hola Mundo en Ruby"
-)
-24. Cree un fichero
-byebyeWorld.rb
-que contenga el siguiente c ́odigo
-Ruby
-:
-#byebyeWorld.rb
-require ’pry’
-#define a method
-def byebye() puts "bye bye world!!!" end
-#set x to 10
-x = 10
-#start a PEPL session
-binding.pry
-#program resumes here (after pry session)
-puts "program resumes here. Value of x is: #{x}."
-25. Ejecute el programa
-byebyeWorld.rb
-para que se lance
-pry
-. (
-ruby byebyeWorld.rb
-)
+
+--------------------
+ruby helloworld.rb
+Hello world
+alu3991@cc418:~/Desktop/lpp/prct03$ irb helloworld.rb
+2.0.0p247 :001 > #!/usr/bin/ruby
+2.0.0p247 :002 >   puts "Hello world"
+Hello world
+ => nil 
+--------------------
+
+
+
 26. ¿Cu ́al es el resultado de cada una de las siguientes opera
 ciones?
 [1] pry(main)> puts x
