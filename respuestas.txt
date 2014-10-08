@@ -54,23 +54,30 @@ Hello world
 26. ¿Cu ́al es el resultado de cada una de las siguientes opera
 ciones?
 [1] pry(main)> puts x
-???
-=> ???
+
+10
+=> nil
+
+
 [2] pry(main)> def hello
 [2] pry(main)* puts "Hello world"
 [2] pry(main)* end
-=> ???
+=> nil
 2
 [3] pry(main)> hello
-???
-=> ???
+Hello world
+=> nil
+
 [4] pry(main)> byebye
-???
-=> ???
+bye bye world!!!
+=> nil
+
 [5] pry(main)> x = "changed"
-=> ???
+=> "changed"
+
 [6] pry(main)> exit
-program resumes here. Value of x is: ???
+program resumes here. Value of x is: changed
+
 27. ¿Cu ́ales son las diferencias entre la ejecuci ́on del pro
 grama
 "Hola Mundo"
@@ -78,58 +85,34 @@ con el int ́erprete
 interactivo y con
 pry
 ? Escriba la respuesta en fichero creado en el ejercicio 9.
-28. A ̃nada todo el contenido del directorio
-prct03
-al
-́ındice del repositorio git
-. (
-git add .
-)
-29. Confirme los cambios del ́ındice en el repositorio
-git
-local.
-(
-git commit -m "Creado el programa byebyeWorld.rb en Ruby par
-a usar con PRY"
-)
-30. Muestre el estado del repositorio
-git
-local, esto es, confirme que el fichero con las respuestas a
-las preguntas 21 y 27 est ́a correctamente almacenado. (
-git status
-)
-31. Muestre las confirmaciones realizadas en el repositorio
-hasta el momento. (
-git log
-)
-32. Empuje los cambios en el repositorio remoto denominado
-origin
-. (
-git push -u origin master
-)
-33. Escriba la direcci ́on del repositorio que ha creado en Gi
-tHub en la tarea habilitada en el campus
-virtual.
-Para realizar los siguientes ejercicios utilice el int ́erp
-rete interactivo
-irb
-o
-pry
-. Copie
-manual-
-mente
-los comandos.
-no corte y pegue
-desde el fichero
-pdf
-, esto puede introducir car ́acteres
-extra ̃nos e invisibles dependiendo de la codificaci ́on que s
-e est ́e utilizando.
+
+irb helloworld.rb
+2.0.0p247 :001 > #!/usr/bin/ruby
+2.0.0p247 :002 >   puts "Hello world"
+Hello world
+ => nil 
+2.0.0p247 :003 > 
+alu3991@cc418:~/Desktop/lpp/prct03$ pry helloworld.rb
+Hello world
+
+
+---------------- Para estudiar --------------------
 34. ¿Qu ́e diferencia hay entre
 "\t\n"
 y
 ’\t\n’
 ?
+
+
+2.0.0p247 :001 > "\t\n"
+ => "\t\n" 
+2.0.0p247 :002 > '\t\n'
+ => "\\t\\n" 
+
+Cuando ruby se encuentra unas dobles comillas inspecciona dentro para ver si dentro hay alguna variable que interpolar. 
+Si solo usamos comillas simples no se preocupa de ello y lo coge todo como un string.
+
+
 35. ¿C ́omo funciona
 %q
 ? ¿Qu ́e es
@@ -137,6 +120,13 @@ y
 ? ¿Qu ́e es
 %q{’a’ ’b’ ’c’}
 ?
+
+%q{hello world\n}
+ => "hello world\\n" 
+%q{'a' 'b' 'c'}
+ => "'a' 'b' 'c'" 
+Equivale una cadena que contiene el string
+
 36. ¿C ́omo funciona
 %Q
 ? ¿Qu ́e es
@@ -144,9 +134,15 @@ y
 ? ¿Qu ́e es
 %Q{"a" "b" "c"}
 ?
-37. ¿Qu ́e queda en
-c
-?
+
+%Q{hello world\n}
+ => "hello world\n" 
+2.0.0p247 :017 > %Q{'a' 'b' 'c'}
+
+Equivale al valor del string
+ => "'a' 'b' 'c'" 
+
+37. ¿Qué queda en c?
 >> a = 4
 => 4
 >> b = 2
@@ -155,10 +151,10 @@ c
 0:0:0" --#{a}--
 0:0:0" --#{b}--
 0:0:0" HERE
-3
-38. ¿Qu ́e queda en
-c
-?
+
+ => "--4--\n--2--\n" 
+
+38. ¿Qué queda en c?
 0:0:0> a = 4
 => 4
 0:0:0> b =2
@@ -167,40 +163,53 @@ c
 0:0:0’ --#{a}--
 0:0:0’ --#{b}--
 0:0:0’ HERE
-39.
-s = "hello"
-. ¿Cu ́al es el valor de las siguientes expresiones?
-s[0,2]
-s[-1,1]
-s[0,10]
-40. ¿Qu ́e queda en
-g
-?
+
+ => "--\#{a}--\n--\#{b}--\n" 
+
+39. s = "hello". ¿Cuál es el valor de las siguientes expresiones?
+
+s[0,2]: => "he" 
+s[-1,1]: => "o" 
+s[0,10]: => "hello" 
+
+40. ¿Qué queda en g?
 >> g = "hello"
 => "hello"
 >> g << " world"
-41. ¿Qu ́e queda en
-e
-?
+
+=> "helloworld" 
+
+
+41. ¿Qué queda en e?
 >> e = ’.’*3
-42. ¿Cu ́al es el resultado?
+=> "..." 
+
+
+42. ¿Cuál es el resultado?
 >> a = 1
 => 1
 >> "#{a=a+1} "*3
-43. ¿Qu ́e es esto?
-%w[this is a test]
-44. ¿Qu ́e es esto?
-%w[\t \n]
-45. ¿Qu ́e es esto?
-%W[\t \n]
-46. ¿Qu ́e contiene
-nils
-?
-nils = Array.new(3)
-47. ¿Qu ́e contiene
-zeros
-?
+=> "222" 
+
+
+43. ¿Qué es esto? %w[this is a test]
+=> ["this", "is", "a", "test"] 
+
+
+44. ¿Qué es esto? %w[\t \n]
+=> ["\\t", "\\n"] 
+
+
+45. ¿Qué es esto? %W[\t \n]
+=> ["\t", "\n"] 
+
+
+46. ¿Qué contiene nils? nils = Array.new(3)
+=> [nil, nil, nil] 
+
+47. ¿Qué contiene zeros?
 zeros = Array.new(3, 0)
+
 48. ¿Qu ́e queda en
 b
 ?
