@@ -1,24 +1,12 @@
-18. ¿Cu ́al es el resultado de la siguiente operaci ́on?
+18. ¿Cuál es el resultado de la siguiente operación?
 2.0.0-p247 :001 > puts "Hello world"
-???
-=> ???
-2.0.0-p247 :002 >
-
 -----
 Hello world
  => nil
 ----
 
-20. Escriba el c ́odigo fuente
-Ruby
-que hace que se muestre por la consola la frase
-"Hola Mundo"
-, al-
-mac ́enelo en el fichero
-helloworld.rb
-y ejec ́utelo con el int ́erprete interactivo. (
-irb helloworld.rb
-)
+20. Escriba el código fuente Ruby que hace que se muestre por la consola la frase "Hola Mundo", almacénelo en el ficherohelloworld.rb 
+y ejecútelo con el intérprete interactivo. (irb helloworld.rb)
 ----------------
 irb helloworld.rb
 2.0.0p247 :001 > #!/usr/bin/ruby
@@ -28,17 +16,9 @@ Hello world
 ----------------
 
 
-21. ¿Cu ́ales son las diferencias entre la ejecuci ́on del pro
-grama"Hola Mundo"
-con el int ́erprete
-de
-Ruby
-(
-ruby helloWorld.rb
-) y el int ́erprete interactivo del ejercicio anterior? Escr
-iba la
+21. ¿Cuáles son las diferencias entre la ejecución del programa"Hola Mundo" con el intérprete
+de Ruby(ruby helloWorld.rb) y el intérprete interactivo del ejercicio anterior? Escriba la
 respuesta en fichero creado en el ejercicio 9.
-
 --------------------
 ruby helloworld.rb
 Hello world
@@ -47,15 +27,12 @@ alu3991@cc418:~/Desktop/lpp/prct03$ irb helloworld.rb
 2.0.0p247 :002 >   puts "Hello world"
 Hello world
  => nil 
+La diferencia radica en que el interprete de ruby devolverá un objeto, además dicho interprete te mostrará el código que está ejecutando.
 --------------------
 
 
-
-26. ¿Cu ́al es el resultado de cada una de las siguientes opera
-ciones?
+26. ¿Cuál es el resultado de cada una de las siguientes operaciones?
 [1] pry(main)> puts x
-
-10
 => nil
 
 
@@ -78,14 +55,8 @@ bye bye world!!!
 [6] pry(main)> exit
 program resumes here. Value of x is: changed
 
-27. ¿Cu ́ales son las diferencias entre la ejecuci ́on del pro
-grama
-"Hola Mundo"
-con el int ́erprete
-interactivo y con
-pry
-? Escriba la respuesta en fichero creado en el ejercicio 9.
-
+27. ¿Cuáles son las diferencias entre la ejecución del programa "Hola Mundo"con el intérprete interactivo y con pry? 
+Escriba la respuesta en fichero creado en el ejercicio 9.
 irb helloworld.rb
 2.0.0p247 :001 > #!/usr/bin/ruby
 2.0.0p247 :002 >   puts "Hello world"
@@ -95,13 +66,11 @@ Hello world
 alu3991@cc418:~/Desktop/lpp/prct03$ pry helloworld.rb
 Hello world
 
+Además pry ofrece más cosas: como depuración online, visualización por colores,...
+
 
 ---------------- Para estudiar --------------------
-34. ¿Qu ́e diferencia hay entre
-"\t\n"
-y
-’\t\n’
-?
+34. ¿Qué diferencia hay entre "\t\n" y ’\t\n’?
 
 
 2.0.0p247 :001 > "\t\n"
@@ -113,13 +82,7 @@ Cuando ruby se encuentra unas dobles comillas inspecciona dentro para ver si den
 Si solo usamos comillas simples no se preocupa de ello y lo coge todo como un string.
 
 
-35. ¿C ́omo funciona
-%q
-? ¿Qu ́e es
-%q{hello world\n}
-? ¿Qu ́e es
-%q{’a’ ’b’ ’c’}
-?
+35. ¿Cómo funciona %q? ¿Qué es %q{hello world\n}? ¿Qué es %q{’a’ ’b’ ’c’}?
 
 %q{hello world\n}
  => "hello world\\n" 
@@ -127,13 +90,7 @@ Si solo usamos comillas simples no se preocupa de ello y lo coge todo como un st
  => "'a' 'b' 'c'" 
 Equivale una cadena que contiene el string
 
-36. ¿C ́omo funciona
-%Q
-? ¿Qu ́e es
-%Q{hello world\n}
-? ¿Qu ́e es
-%Q{"a" "b" "c"}
-?
+36. ¿Cómo funciona %Q? ¿Qué es %Q{hello world\n}? ¿Qué es %Q{"a" "b" "c"}?
 
 %Q{hello world\n}
  => "hello world\n" 
@@ -210,75 +167,90 @@ s[0,10]: => "hello"
 47. ¿Qué contiene zeros?
 zeros = Array.new(3, 0)
 
-48. ¿Qu ́e queda en
-b
-?
+48. ¿Qué queda en b ?
 >> x = [[1,2],[3,4]]
 => [[1, 2], [3, 4]]
 >> b = Array.new(x)
-49. ¿Qu ́e queda en
-c
-?
+=> [[1, 2], [3, 4]] 
+
+49. ¿Qué queda en c ?
 >> c = Array.new(3) { |i| 2*i }
-50. ¿Cu ́al es el resultado de cada una de estas operaciones?
+=> [0, 2, 4] 
+
+50. ¿Cuál es el resultado de cada una de estas operaciones?
 >> a = (’a’..’e’).to_a
 => ["a", "b", "c", "d", "e"]
 >> a[1,1]
-=> ???
+=> ["b"] 
 >> a[-2,2]
-=> ???
+ => ["d", "e"] 
 >> a[0..2]
-=> ???
+=> ["a", "b", "c"] 
 >> a[0...1]
-=> ???
+ => ["a"]
 >> a[-2..-1]
-=> ???
-4
-51. ¿Cu ́al es el resultado de cada una de estas operaciones?
+=> ["d", "e"] 
+
+51. ¿Cuál es el resultado de cada una de estas operaciones?
 >> a
 => ["a", "b", "c", "d", "e"]
 >> a[0,2] = %w{A B}
 => ["A", "B"]
 >> a
-=> ???
+=> ["A", "B", "c", "d", "e"] 
+
 >> a[2..5] = %w{C D E}
 => ["C", "D", "E"]
 >> a
-=> ???
+ => ["A", "B", "C", "D", "E"]
+ 
 >> a[0,0] = [1,2,3]
 => [1, 2, 3]
 >> a
-=> ???
+=> [1, 2, 3, "A", "B", "C", "D", "E"] 
+
 >> a[0,2] = []
 => []
 >> a
-=> ???
+=> [3, "A", "B", "C", "D", "E"] 
+
 >> a[-1,1] = [ ’Z’ ]
 => ["Z"]
 >> a
-=> ???
+=> [3, "A", "B", "C", "D", "Z"] 
+
 >> a[-2,2] = nil
 => nil
 >> a
-=> ???
-52. ¿Cu ́al es el resultado de cada una de estas operaciones?
+=> [3, "A", "B", "C", nil] 
+
+52. ¿Cuál es el resultado de cada una de estas operaciones?
 >> a = (1...4).to_a
-=> ???
+ => [1, 2, 3] 
 >> a = a + [4, 5]
-=> ???
+=> [1, 2, 3, 4, 5] 
+
 >> a += [[6, 7, 8]]
-=> ???
+=> [1, 2, 3, 4, 5, 6, 7, 8] 
+
 >> a = a + 9
-=> ???
-53. ¿Cu ́al es el resultado de cada una de estas operaciones?
+TypeError: no implicit conversion of Fixnum into Array
+        from (irb):24:in `+'
+        from (irb):24
+        from /usr/local/rvm/rubies/ruby-2.0.0-p247/bin/irb:13:in `<main>'
+
+53. ¿Cuál es el resultado de cada una de estas operaciones?
 >> x = %w{a b c b a}
-=> ???
+ => ["a", "b", "c", "b", "a"] 
+
 >> x = x - %w{b c d}
-=> ???
-54. ¿Cu ́al es el resultado de cada una de estas operaciones?
+ => ["a", "a"] 
+ 
+54. ¿Cuál es el resultado de cada una de estas operaciones?
 >> z = [0]*8
-=> ???
-55. ¿Cu ́al es el resultado de cada una de estas operaciones?
+ => [0, 0, 0, 0, 0, 0, 0, 0]
+ 
+55. ¿Cuál es el resultado de cada una de estas operaciones?
 >> a = []
 => []
 >> a << 1
@@ -296,124 +268,167 @@ c
 >> b = [5, 5, 4, 4, 3, 3, 2]
 => [5, 5, 4, 4, 3, 3, 2]
 >> c = a | b
-=> ???
+ => [1, 2, 3, 4, 5]
+ 
 >> d = b | a
-=> ???
+=> [5, 4, 3, 2, 1] 
+
 >> e = a & b
-=> ???
+=> [2, 3, 4]
+
 >> f = b & a
-=> ???
-57. ¿Qu ́e resultados dan las siguientes operaciones?
+=> [4, 3, 2] 
+
+57. ¿Qué resultados dan las siguientes operaciones?
 >> a = 1..10
 => 1..10
 >> a.class
 => Range
 >> a.to_a
-=> ???
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+
 >> b = 1...10
 => 1....10
 >> b.to_a
-=> ???
+ => [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+ 
 >> b.include? 10
-=> ???
+ => false 
+ 
 >> b.include? 8
-=> ???
+=> true
+
 >> b.step(2) {|x| print "#{x} " }
-=> ???
+13579 => 1...10 
+
 >> 1..3.to_a
-=> ???
-58. ¿Qu ́e resultados dan las siguientes operaciones?
+NoMethodError: undefined method `to_a' for 3:Fixnum
+        from (irb):51
+        from /usr/local/rvm/rubies/ruby-2.0.0-p247/bin/irb:13:in `<main>'
+        
+58. ¿Qué resultados dan las siguientes operaciones?
 >> r = 0...100
 => 0....100
 >> r.member? 50
-=> ???
+=> true
+
 >> r.include? 99.9
-=> ???
+=> true
+
 >> r.member? 99.9
-=> ???
-59. ¿Qu ́e resultados dan las siguientes operaciones?
+=> true
+
+59. ¿Qué resultados dan las siguientes operaciones?
 >> true.class
-=> ???
+ => TrueClass 
+ 
 >> false.class
-=> ???
+=> FalseClass
+
 >> puts "hello" if 0
-=> ???
+hello
+ => nil 
+ 
 >> puts "hello" if nil
-=> ???
+=> nil
+
 >> puts "hello" if ""
-=> ???
-60. ¿Qu ́e resultados dan las siguientes operaciones?
+(irb):60: warning: string literal in condition
+hello
+ => nil 
+
+60. ¿Qué resultados dan las siguientes operaciones?
 >> x = :sym
 => :sym
 >> x.class
-6
-=> ???
+=> Symbol
+
 >> x == ’sym’
-=> ???
+ => false 
+
 >> x == :sym
-=> ???
+ => true 
+ 
 >> z = :’a long symbol’
 => :"a long symbol"
 >> z.class
-=> ???
+=> Symbol
+
 >> x == ’sym’.to_sym
-=> ???
+ => true
+ 
 >> x.to_s == ’sym’
-=> ???
-61. ¿Qu ́e resultados se dan?
+ => true
+ 
+61. ¿Qué resultados se dan?
 >> s = "Ruby"
 => "Ruby"
 >> t = s
-=> ???
+ => "Ruby"
+ 
 >> t[-1] = ""
-=> ???
+=> "" 
+
 >> print s
-???
+Rub => nils
+
 >> t = "Java"
-=> ???
+=> "Java" 
+
 >> print s, t
-???
-62. ¿Cu ́al es el resultado?
+RubJava => nils
+
+62. ¿Cuál es el resultado?
 >> "%d %s" % [3, "rubies"]
-=> ???
-63. ¿Cu ́ales son los resultados?
+=> "3 rubies" 
+
+63. ¿Cuáles son los resultados?
 >> x, y = 4, 5
-=> ???
+ => [4, 5] 
+ 
 >> z = x > y ? x : y
-=> ???
+=> 5
+
 >> x,y,z = [1,2,3]
-=> ???
-64. ¿Qu ́e resultados dan las siguientes operaciones?
+ => [1, 2, 3] 
+ 
+64. ¿Qué resultados dan las siguientes operaciones?
 >> x = { :a => 1, :b => 2 }
 => {:b=>2, :a=>1}
 >> x.keys
-=> ???
+=> [:a, :b] 
+
 >> x.values
-=> ???
+ => [1, 2] 
+
 >> x[:c] = 3
 => 3
 >> x
-=> ???
+ => {:a=>1, :b=>2, :c=>3} 
+
 >> x.delete(’a’)
 => nil
 >> x
-=> ???
+ => {:a=>1, :b=>2, :c=>3} 
+ 
 >> x.delete(:a)
 => 1
 >> x
-=> ???
+=> {:b=>2, :c=>3} 
 >> x = { :a => 1, :b => 2, :c => 4 }
 => {:b=>2, :c=>4, :a=>1}
-7
 >> x.delete_if { |k,v| v % 2 == 0 }
-=> ???
+ => {:a=>1} 
 >> x
-=> ???
-65. ¿Qu ́e hace la siguiente sentencia?
+=> {:a=>1}
+
+65. ¿Qué hace la siguiente sentencia?
 counts = Hash.new(0)
-¿Qu ́e diferencia hay con la asignaci ́on
-counts = {}
-?
-66. ¿Qu ́e retorna esta expresi ́on regular?
-’hello world, hello LPP’.scan /\w+/
-67. Cierre la sesi ́o
+¿Qué diferencia hay con la asignación counts = {}?
+
+En el caso de que no exista una clave (cuando se busque), la primera opción te devolverá el valor por defecto, en este caso le pusimos un cero.
+
+66. ¿Qué retorna esta expresión regular? ’hello world, hello LPP’.scan /\w+/
+ => ["hello", "world", "hello", "LPP"] 
+
+67. Cierre la sesión
